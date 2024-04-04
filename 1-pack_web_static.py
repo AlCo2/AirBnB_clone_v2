@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ fabric script to generates a tgz archive """
 import os.path
 import time
