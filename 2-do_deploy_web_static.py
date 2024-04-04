@@ -7,7 +7,7 @@ from fabric.api import env
 from fabric.api import put
 from fabric.api import run
 
-env.hosts = ["104.196.168.90", "35.196.46.172"]
+env.hosts = ["100.25.143.95", "54.175.165.203"]
 
 def do_pack():
     """ the function to create the tgz """
