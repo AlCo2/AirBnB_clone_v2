@@ -10,6 +10,10 @@ def do_pack():
     t = time.localtime()
     current_time = time.strftime("%Y%m%d%H%M%S", t)
     name = "versions/web_static_{}.tgz".format(current_time)
-    local("mkdir -p versions")
-    local("tar -cvcf {} web_static".format(name))
+
+    if os.path.isdir("versions") is False:
+        if local("mkdir -p versions").failed is True:
+            return None
+    if local("tar -cvzf {} web_static".format(name)).failed is True:
+        return None
     return name
