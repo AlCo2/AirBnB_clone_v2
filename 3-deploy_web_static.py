@@ -44,6 +44,8 @@ def do_deploy(archive_path):
 
 
 def deploy():
+    """ run two function and deploy app """
+
     archive = do_pack()
     if archive is None:
         return False
