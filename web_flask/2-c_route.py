@@ -19,6 +19,7 @@ def hbnb():
 
 @app.route('/c/<text>')
 def c_isfum(text):
+    """ handle route /c/<text> """
     return "C {}".format(text)
 
 
